@@ -1,0 +1,46 @@
+.movieRowGrid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.moviePoster {
+  margin: 10px;
+  height: auto;
+  width: auto;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: aliceblue;
+  -webkit-transition: -webkit-transform 400ms;
+  transition: -webkit-transform 400ms;
+  transition: transform 400ms;
+  transition: transform 400ms, -webkit-transform 400ms;
+  cursor: pointer;
+}
+
+.moviePoster img {
+  height: 750px;
+  padding: 5px;
+  vertical-align: middle;
+  -webkit-transition: -webkit-transform 400ms;
+  transition: -webkit-transform 400ms;
+  transition: transform 400ms;
+  transition: transform 400ms, -webkit-transform 400ms;
+}
+
+.moviePoster img:hover {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+}
+
+.moviePoster:hover {
+  opacity: .9;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+/*# sourceMappingURL=MovieRow.css.map */
