@@ -1,32 +1,43 @@
+@import './variables/Variables.scss';
+
 .movieRowGrid {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    max-width: 1600px;
   }
 
   .moviePoster{
-    margin: 10px;
-    height: auto;
-    width: auto;
-    border: 2px solid black;
+    margin: 7px;
+    height: 450px;
+    width: 300px;
+    border: 2px solid rgb(80, 80, 80);
     border-radius: 5px;
-    background-color: aliceblue;
-    transition: transform 400ms;
+    background-color: $mainGreyColor;
+    position: relative;
     cursor: pointer;
     img{
-        height: 750px;
-        padding: 5px;
+        height: 450px;
+        width: 300px;
         vertical-align: middle;
-        transition: transform 400ms;
-    }
-    img:hover{
-      transform:scale(1.03)
     }
 
-    
+    .star {
+      font-size:45px;
+      position: absolute;
+      visibility: hidden;
+      right: 25px;
+      bottom: 45px;
+      cursor:pointer;
+    }
+   
+  .star:before {
+     content: "\2606";
+     visibility:visible;
+     color: $goldColor;
   }
-
-  .moviePoster:hover{
-    opacity: .9;
-      transform: scale(1.02);
+  .star:checked:before {
+     content: "\2605";
+  }
+ 
   }

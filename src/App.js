@@ -1,5 +1,6 @@
 import './App.css';
 import './styles/MovieRow.css'
+import './styles/NavBar.css'
 import HomeScreen from './components/screens/HomeScreen';
 
 function App() {
