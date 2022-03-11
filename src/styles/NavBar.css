@@ -1,26 +1,45 @@
 .navBar {
   width: 100%;
   height: 75px;
-  background-color: #1515bd;
+  background-color: black;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: -webkit-sticky;
   position: sticky;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   top: 0;
   z-index: 1000;
 }
 
 .navBar h1 {
   font-size: 2.2rem;
+  color: white;
   font-weight: 700;
-  margin-left: 20px;
+  margin-left: 30px;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+}
+
+.navBar a {
+  text-decoration: none;
+}
+
+.navBar .navItems {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  max-width: 1800px;
 }
 
 .navLinks {
@@ -30,34 +49,21 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 50%;
-  max-width: 800px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-right: 20px;
 }
 
 .navLinks a {
   font-weight: 600;
-  font-size: 1.8rem;
   color: white;
+  font-size: 1.8rem;
+  margin-right: 30px;
   text-decoration: none;
 }
 
 .navLinks a:hover {
-  cursor: pointer;
   opacity: .9;
-}
-
-.navLinks .searchBar {
-  height: 40px;
-  width: 250px;
-  border-radius: 10px;
-  border: none;
-  font-size: 18px;
-  font-weight: 600;
-  text-indent: 10px;
 }
 
 .navLinks :focus {
@@ -65,13 +71,28 @@
   opacity: .9;
 }
 
+.titleMovie {
+  color: #ceae22;
+}
+
+.titleMania {
+  color: #399dcc;
+}
+
 .searchBar {
   height: 40px;
-  width: 250px;
+  width: 100%;
+  max-width: 800px;
   border-radius: 10px;
   border: none;
+  margin: 10px;
   font-size: 18px;
   font-weight: 600;
   text-indent: 10px;
+}
+
+.searchBar:focus {
+  outline: none;
+  opacity: .9;
 }
 /*# sourceMappingURL=NavBar.css.map */

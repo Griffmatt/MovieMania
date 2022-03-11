@@ -2,7 +2,7 @@ import React from 'react'
 
 function SearchBar() {
   return (
-    <input type="search" className="searchBar"/>
+    <input type="search" placeholder="Search For a Movie..." className="searchBar"/>
     )
 }
 

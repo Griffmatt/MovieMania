@@ -3,8 +3,8 @@
 .movieRowGrid {
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
-    max-width: 1600px;
   }
 
   .moviePoster{
@@ -15,29 +15,61 @@
     border-radius: 5px;
     background-color: $mainGreyColor;
     position: relative;
-    cursor: pointer;
     img{
         height: 450px;
         width: 300px;
         vertical-align: middle;
     }
-
     .star {
-      font-size:45px;
+      font-size:55px;
       position: absolute;
       visibility: hidden;
-      right: 25px;
-      bottom: 45px;
+      right: 35px;
+      bottom: 50px;
       cursor:pointer;
     }
    
   .star:before {
      content: "\2606";
      visibility:visible;
-     color: $goldColor;
+     color: $mainGoldColor;
+     text-shadow: -1px 0 $secondaryGreyColor, 0 1px $secondaryGreyColor, 1px 0 $secondaryGreyColor, 0 -1px $secondaryGreyColor;
   }
   .star:checked:before {
      content: "\2605";
   }
- 
+
+  .movieRating{
+    background-color: rgba(0, 0, 0, 0.404);
+    position: absolute;
+    padding: 0px 10px;
+    font-size: 1.8rem;
+    font-weight: 600;
+    
   }
+}
+
+  .greatMovie{
+    color: $greatMovieColor;
+  }
+  .goodMovie{
+    color: $goodMovieColor;
+  }
+  .averageMovie{
+    color: $averageMovieColor;
+  }
+  .badMovie{
+    color: $badMovieColor;
+  }
+
+  .movieSelectionTitle{
+    color: $mainGoldColor
+  }
+
+  h1{
+    font-size: 2rem;
+  }
+
+
+ 
+

@@ -1,0 +1,99 @@
+@import './variables/Variables.scss';
+
+
+.movieCardContainer{
+    display: flex;
+    justify-content: center;
+}
+
+.movieCardRow{
+    padding: 10px;
+    max-width: 1800px;
+    width:100%;
+    background-color: $mainGreyColor;
+}
+.movieCard{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.movieCardPoster{
+    margin: 7px;
+    border-radius: 5px;
+    .movieImage{
+        position: relative;
+    }
+    img{
+        height: auto;
+        width: 100%;
+        min-width: 300px;
+    }
+
+    .star {
+        font-size:45px;
+        position: absolute;
+        visibility: hidden;
+        right: 25px;
+        bottom: 45px;
+        cursor:pointer;
+      }
+     
+    .star:before {
+       content: "\2606";
+       visibility:visible;
+       color: $mainGoldColor;
+    }
+    .star:checked:before {
+       content: "\2605";
+    }
+   
+
+}
+
+.movieInfo{
+    max-width: 65%;
+    text-align: left;
+    margin: 10px;
+    h2{
+        font-size: 35px;
+        margin-top: 0;
+        font-weight: 900;
+        margin-bottom: 10px;
+    }
+    h4{
+        font-size: 25px;
+        margin-bottom: 5px;
+        color: $mainBlueColor
+    }
+    p{
+        font-size: 18px;
+        margin-top: 0;
+    }
+    h5{
+        font-size: 20px;
+        color: $secondaryGreyColor;
+        margin-top: 10px;
+    }
+}
+
+.movieMediaContainer{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    .movieMedia img{
+        height: 100%;
+        width: auto; 
+        min-width: 200px; 
+        margin: 10px;
+    }
+    h4{
+        font-size: 25px;
+        margin-bottom: 5px;
+        color: $mainBlueColor
+    }
+}
+.infoRating{
+    margin-left: 10px;
+    color: $mainGoldColor;
+}

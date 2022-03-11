@@ -3,45 +3,44 @@
 .navBar{
     width:100%;
     height: 75px;
-    background-color: $mainBlueColor;
+    background-color: $blackColor;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     position: sticky;
+    align-items: center;
     top:0;
     z-index: 1000;
     h1{
         font-size: 2.2rem;
+        color: $whiteColor;
         font-weight: 700;
-        margin-left: 20px;
+        margin-left: 30px;
         align-self: center;
+    }
+    a{
+        text-decoration: none;
+    }
+    .navItems{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 1800px;
     }
 }
 
 .navLinks{
     display: flex;
     justify-content: space-between;
-    width: 50%;
-    max-width: 800px;
     align-items: center;
-    margin-right: 20px;
     a{
         font-weight: 600;
+        color: $whiteColor;
         font-size: 1.8rem;
-        color: white;
+        margin-right: 30px;
         text-decoration: none;
     }
     a:hover{
-        cursor: pointer;
         opacity: .9;
-    }
-    .searchBar{
-        height: 40px;
-        width: 250px;
-        border-radius: 10px;
-        border: none;
-        font-size: 18px;
-        font-weight: 600;
-        text-indent: 10px;
     }
     :focus{
         outline: none;
@@ -49,12 +48,26 @@
     }
 }
 
+.titleMovie{
+    color:$mainGoldColor;
+}
+
+.titleMania{
+    color:$mainBlueColor;
+}
+
 .searchBar{
     height: 40px;
-    width: 250px;
+    width: 100%;
+    max-width: 800px;
     border-radius: 10px;
     border: none;
+    margin:10px;
     font-size: 18px;
     font-weight: 600;
     text-indent: 10px;
+}
+.searchBar:focus{
+    outline: none;
+    opacity: .9;
 }

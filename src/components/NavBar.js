@@ -1,16 +1,17 @@
 import React from 'react'
-import SearchBar from './SearchBar'
 
 function NavBar() {
   return (
     <div className="navBar">
-        <h1>MovieMania</h1>
-        <nav className="navLinks">
-            <a href="#">Popular</a>
-            <a href="#">Coming Soon</a>
-            <a href="#">Favorites</a>
-            <SearchBar/>
-        </nav>
+      <nav className="navItems">
+        <a href="/"><h1><span className="titleMovie">M</span>ovie<span className="titleMania">M</span>ania</h1></a>
+        <div className="navLinks">
+          <a href="/">Home</a>
+            <a href="/favorite-movies">Favorites</a>
+            <a href="/">About</a>
+            <a href="/search-movies">Search</a>
+        </div>
+      </nav>
     </div>
   )
 }
