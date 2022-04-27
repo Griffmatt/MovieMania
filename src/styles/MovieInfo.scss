@@ -29,26 +29,6 @@
         width: 100%;
         min-width: 300px;
     }
-
-    .star {
-        font-size:45px;
-        position: absolute;
-        visibility: hidden;
-        right: 25px;
-        bottom: 45px;
-        cursor:pointer;
-      }
-     
-    .star:before {
-       content: "\2606";
-       visibility:visible;
-       color: $mainGoldColor;
-    }
-    .star:checked:before {
-       content: "\2605";
-    }
-   
-
 }
 
 .movieInfo{

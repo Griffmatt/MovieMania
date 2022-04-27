@@ -3,6 +3,7 @@ import React from 'react'
 
 function MovieCard({movie}) {
   const base_url = "https://image.tmdb.org/t/p/w400"
+  console.log(movie)
  
   return (
     <div className="movieCardContainer">

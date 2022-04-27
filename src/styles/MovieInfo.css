@@ -39,25 +39,6 @@
   min-width: 300px;
 }
 
-.movieCardPoster .star {
-  font-size: 45px;
-  position: absolute;
-  visibility: hidden;
-  right: 25px;
-  bottom: 45px;
-  cursor: pointer;
-}
-
-.movieCardPoster .star:before {
-  content: "\2606";
-  visibility: visible;
-  color: #ceae22;
-}
-
-.movieCardPoster .star:checked:before {
-  content: "\2605";
-}
-
 .movieInfo {
   max-width: 65%;
   text-align: left;

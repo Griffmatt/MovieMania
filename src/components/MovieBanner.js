@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom'
 
 function MovieBanner({movie}) {
     const base_url = "https://image.tmdb.org/t/p/original"
+    console.log(movie)
   return (
         <div className="movieBanner">
             <div>

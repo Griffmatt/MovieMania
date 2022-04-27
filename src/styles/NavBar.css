@@ -14,17 +14,19 @@
       -ms-flex-align: center;
           align-items: center;
   top: 0;
-  z-index: 1000;
+  z-index: 1001;
 }
 
 .navBar h1 {
   font-size: 2.2rem;
   color: white;
   font-weight: 700;
-  margin-left: 30px;
+  margin-left: 10px;
   -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
       align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .navBar a {
@@ -52,13 +54,14 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-right: 10px;
 }
 
 .navLinks a {
   font-weight: 600;
   color: white;
   font-size: 1.8rem;
-  margin-right: 30px;
+  margin-left: 20px;
   text-decoration: none;
 }
 
@@ -71,12 +74,13 @@
   opacity: .9;
 }
 
-.titleMovie {
-  color: #ceae22;
-}
-
-.titleMania {
-  color: #399dcc;
+@media only screen and (max-width: 425px) {
+  .navLinks a {
+    display: none;
+  }
+  .navBar h1 {
+    font-size: 1.8rem;
+  }
 }
 
 .searchBar {

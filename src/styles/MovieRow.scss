@@ -1,7 +1,13 @@
 @import './variables/Variables.scss';
 
+.movieRowContainer{
+  display: flex;
+  justify-content: center;
+}
+
 .movieRowGrid {
     display: flex;
+    max-width: 1800px;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
@@ -20,24 +26,6 @@
         width: 300px;
         vertical-align: middle;
     }
-    .star {
-      font-size:55px;
-      position: absolute;
-      visibility: hidden;
-      right: 35px;
-      bottom: 50px;
-      cursor:pointer;
-    }
-   
-  .star:before {
-     content: "\2606";
-     visibility:visible;
-     color: $mainGoldColor;
-     text-shadow: -1px 0 $secondaryGreyColor, 0 1px $secondaryGreyColor, 1px 0 $secondaryGreyColor, 0 -1px $secondaryGreyColor;
-  }
-  .star:checked:before {
-     content: "\2605";
-  }
 
   .movieRating{
     background-color: rgba(0, 0, 0, 0.404);
@@ -49,26 +37,6 @@
   }
 }
 
-  .greatMovie{
-    color: $greatMovieColor;
-  }
-  .goodMovie{
-    color: $goodMovieColor;
-  }
-  .averageMovie{
-    color: $averageMovieColor;
-  }
-  .badMovie{
-    color: $badMovieColor;
-  }
-
-  .movieSelectionTitle{
-    color: $mainGoldColor
-  }
-
-  h1{
-    font-size: 2rem;
-  }
 
 
  

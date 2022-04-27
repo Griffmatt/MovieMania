@@ -1,7 +1,17 @@
+.movieRowContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .movieRowGrid {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  max-width: 1800px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -28,55 +38,11 @@
   vertical-align: middle;
 }
 
-.moviePoster .star {
-  font-size: 55px;
-  position: absolute;
-  visibility: hidden;
-  right: 35px;
-  bottom: 50px;
-  cursor: pointer;
-}
-
-.moviePoster .star:before {
-  content: "\2606";
-  visibility: visible;
-  color: #ceae22;
-  text-shadow: -1px 0 #7a7a7a, 0 1px #7a7a7a, 1px 0 #7a7a7a, 0 -1px #7a7a7a;
-}
-
-.moviePoster .star:checked:before {
-  content: "\2605";
-}
-
 .moviePoster .movieRating {
   background-color: rgba(0, 0, 0, 0.404);
   position: absolute;
   padding: 0px 10px;
   font-size: 1.8rem;
   font-weight: 600;
-}
-
-.greatMovie {
-  color: #009900;
-}
-
-.goodMovie {
-  color: #6fb400;
-}
-
-.averageMovie {
-  color: #e9e504;
-}
-
-.badMovie {
-  color: #cc1800;
-}
-
-.movieSelectionTitle {
-  color: #ceae22;
-}
-
-h1 {
-  font-size: 2rem;
 }
 /*# sourceMappingURL=MovieRow.css.map */

@@ -1,0 +1,68 @@
+@import './variables/Variables.scss';
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #282c34;
+    color: white;
+    text-align: center;
+}
+
+.greatMovie{
+    color: $greatMovieColor;
+  }
+  .goodMovie{
+    color: $goodMovieColor;
+  }
+  .averageMovie{
+    color: $averageMovieColor;
+  }
+  .badMovie{
+    color: $badMovieColor;
+  }
+
+  .movieSelectionTitle{
+    color: $mainGoldColor
+  }
+
+  h1{
+    font-size: 2rem;
+  }
+
+  @media only screen and (max-width: 425px) {
+
+    h1 { 
+       display: none;
+    }
+ 
+ }
+
+ .star {
+  font-size:45px;
+  position: absolute;
+  visibility: hidden;
+  right: 25px;
+  bottom: 45px;
+  cursor:pointer;
+}
+
+.star:before {
+ content: "\2606";
+ visibility:visible;
+ color: $mainGoldColor;
+}
+.star:checked:before {
+ content: "\2605";
+}
+
+.titleMovie{
+  color:$mainGoldColor;
+}
+
+.titleMania{
+  color:$mainBlueColor;
+}
