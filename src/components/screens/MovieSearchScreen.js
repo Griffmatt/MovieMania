@@ -1,15 +1,12 @@
-import React, {useEffect, useState} from 'react'
-import NavBar from '../NavBar'
-import axios from '../../axios';
-
+import React from 'react'
 import SearchBar from '../SearchBar'
+import requests from '../../shared/requests'
 
 function MovieSearch() {
 
   return (
     <>
-      <NavBar/>
-      <SearchBar/>
+      <SearchBar request={requests.fetchSearch}/>
     </>
   )
 }

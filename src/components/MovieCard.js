@@ -1,15 +1,11 @@
 import React from 'react'
 
-
 function MovieCard({movie}) {
   const base_url = "https://image.tmdb.org/t/p/w400"
-  console.log(movie)
- 
   return (
     <div className="movieCardContainer">
-      <div className="movieCardRow">
-      <div className="movieCard">
-         
+            <div className="movieCardRow">
+            <div className="movieCard">
             <div key={movie.title} className="movieCardPoster">
               <div className="movieImage">
                 <input className="star" type="checkbox"/>
@@ -37,7 +33,7 @@ function MovieCard({movie}) {
           <div className="movieTrailer">
               
           </div>
-      </div>
+          </div>
     </div>
   )
 }

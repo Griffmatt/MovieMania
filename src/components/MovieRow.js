@@ -1,9 +1,21 @@
-import React from 'react'
-
+import React, {useState, useEffect} from 'react'
+import instance from '../axios'
 import {Link} from 'react-router-dom'
 
-function MovieRow({movies}) {
+function MovieRow({request}) {
   const base_url = "https://image.tmdb.org/t/p/w300"
+
+  const [movies, setMovies] = useState([])
+  useEffect(() => {
+    async function fetchData() {
+        const response = await instance.get(request)
+            setMovies(response.data.results)
+            console.log(response.data.results[0])
+        return response;
+    }
+    fetchData();
+  },[request] );
+  console.log(movies)
   return (
     <div className="movieRowContainer">
       <div className="movieRowGrid">

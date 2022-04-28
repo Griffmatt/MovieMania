@@ -1,9 +1,23 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import {Link} from 'react-router-dom'
+import requests from '../shared/requests'
+import instance from '../axios'
 
-function MovieBanner({movie}) {
+function MovieBanner() {
+    const [movie, setMovie] =useState([])
     const base_url = "https://image.tmdb.org/t/p/original"
-    console.log(movie)
+    useEffect(() =>{
+        async function fetchData(){
+            const request = await instance.get(requests.fetchUpcoming);
+            setMovie(
+                request.data.results.filter(movie => movie.title && movie.backdrop_path)[
+                    Math.floor(Math.random() * request.data.results.length -1)
+                ]
+            )
+            return request;
+        }
+        fetchData()
+    }, [])
   return (
         <div className="movieBanner">
             <div>

@@ -1,17 +1,18 @@
 import React from 'react'
+import requests from '../../shared/requests'
 import MovieBanner from '../MovieBanner'
 import MovieRow from '../MovieRow'
-import NavBar from '../NavBar'
 
 
-function HomeScreen({movie, movies}) {
+
+
+function HomeScreen() {
 
   return (
     <>
-      <NavBar/>
-      <MovieBanner movie={movie}/>
+      <MovieBanner/>
       <h1><span className="movieSelectionTitle">Popular</span> Movies</h1>
-      <MovieRow movies={movies}/>
+      <MovieRow request={requests.fetchPopular}/>
     </>
   )
 }
