@@ -77,3 +77,31 @@
     margin-left: 10px;
     color: $mainGoldColor;
 }
+
+.crewInfo{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.crewInfo{
+    h4{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.crew{
+    display: flex;
+    text-align: center;
+}
+
+.crewMember{
+    margin:5px;
+}
+
+.movieImages{
+    height: auto;
+    width: 90vw;
+    max-width: 600px;
+}

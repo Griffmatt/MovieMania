@@ -5,7 +5,7 @@ const requests= {
     fetchPopular:`/movie/popular?api_key=${API_KEY}&language=en-us`,
     fetchUpcoming:`/movie/upcoming?api_key=${API_KEY}&language=en-us&include_adult=false`,
     fetchSearch:`/search/movie?api_key=${API_KEY}&query=`,
-    fetchMovieInfo:`?api_key=${API_KEY}&language=en-US`
+    fetchMovieInfo:`?api_key=${API_KEY}&language=en-US&append_to_response=credits,images&include_image_language=en`
 }
 
 export default requests;

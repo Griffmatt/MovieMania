@@ -1,7 +1,10 @@
 import React from 'react'
+import Cast from './Crew';
 
-function MovieCard({movie}) {
-  const base_url = "https://image.tmdb.org/t/p/w400"
+function MovieCard({movie, images, cast, crew, genre}) {
+  const base_url = "https://image.tmdb.org/t/p/w500"
+  
+  
   return (
     <div className="movieCardContainer">
             <div className="movieCardRow">
@@ -18,21 +21,22 @@ function MovieCard({movie}) {
                   <h4>Description</h4>
                   <p>{movie.overview}</p>
                   <h5>{movie.release_date} <span className='infoRating'>{movie.vote_average}/10</span></h5>
+                  <Cast genre={genre} crew={crew}/>
+                </div>
               </div>
           </div>
           <div className="movieMediaContainer">
             <div className="moveMedia">
               <h4>Images</h4>
-              <img src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`} alt={movie.title}/>
+              <img src={`https://image.tmdb.org/t/p/w500${images}`} alt={movie.title} className="movieImages"/>
             </div>
             <div className="moveMedia">
               <h4>Trailer</h4>
-              <img src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`} alt={movie.title}/>
+              <img src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`} alt={movie.title} className="movieImages"/>
             </div>
           </div>
           <div className="movieTrailer">
               
-          </div>
           </div>
     </div>
   )
