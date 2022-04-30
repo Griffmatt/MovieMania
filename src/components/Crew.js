@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Crew({genre, crew}) {
+function Crew({crew}) {
     const getCrewInfo = (position) => {
         const results = crew.filter(
           (person) => person.job === position
@@ -19,22 +19,6 @@ function Crew({genre, crew}) {
           </div>
         )
       };
-    
-      const getGenre = ()=> {
-    
-        if (genre.length === 0) {
-          return <p>Genres coming soon...</p>;
-        }
-    
-        return (
-          <div className="crew">
-            {genre.map((genre, i) => (
-            <p key={i} className="crewMember">
-              {genre.name}
-            </p>))}
-          </div>
-        )
-      }
   return (
     <div className="crewInfo">
         <div>
@@ -48,10 +32,6 @@ function Crew({genre, crew}) {
         <div>
         <h4>Screenplay</h4>
         {crew && getCrewInfo('Screenplay')}
-        </div>
-        <div>
-        <h4>Genre</h4>
-        {genre && getGenre()}
         </div>
   </div>
   )

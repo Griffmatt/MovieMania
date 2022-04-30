@@ -10,6 +10,7 @@ function MovieInfo({id}) {
   const [images, setImages] = useState([])
   const [crew, setCrew] = useState([])
   const [genre, setGenre] = useState([])
+  const [movieYear, setMovieYear] = useState([])
 
   useEffect(()=> {
     async function fetchData() {
@@ -17,8 +18,9 @@ function MovieInfo({id}) {
             setMovie(response.data)
             setCast(response.data.credits.cast)
             setCrew(response.data.credits.crew)
-            setImages(response.data.images.backdrops[0].file_path)
+            setImages(response.data.images.backdrops)
             setGenre(response.data.genres)
+            setMovieYear(response.data.release_date.slice(0,4))
         return response
       }
       fetchData();
@@ -26,7 +28,7 @@ function MovieInfo({id}) {
 console.log(movie)
   return (
     <>
-      <MovieCard movie={movie} images={images} cast={cast} crew={crew} genre={genre}/>
+      <MovieCard movie={movie} images={images} cast={cast} crew={crew} genre={genre} movieYear={movieYear}/>
     </>
   )
  
