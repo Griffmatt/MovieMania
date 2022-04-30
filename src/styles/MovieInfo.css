@@ -138,6 +138,10 @@
   margin: 5px;
 }
 
+.movieImageContainer {
+  max-width: 600px;
+}
+
 .movieImages {
   height: auto;
   width: 90vw;
