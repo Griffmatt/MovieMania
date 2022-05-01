@@ -49,13 +49,13 @@ function MovieRow({request}) {
   return (
     <div className="movieRowContainer">
       <div className="movieRowGrid">
-        {!request && favorites.length === 0?"":movies.map(movie =>{
+        {movies.map(movie =>{
           return(
             <div key={movie.title} className="moviePoster">
               <input className="star" type="checkbox" onClick={() => handleFavoritesClick(movie)} defaultChecked={handleFavoritesCheck(movie)}/>
               <Link to={`/${movie.id}`}>
               <div className={`movieRating ${movie.vote_average > 9? "greatMovie":movie.vote_average > 7.5? "goodMovie":movie.vote_average > 5? "averageMovie": "badMovie"}`}>
-                {movie.vote_average}
+                {movie.vote_average === 0? "":movie.vote_average}
               </div>
               <img src={`${base_url}${movie.poster_path}`} alt={movie.title}/>
               </Link>

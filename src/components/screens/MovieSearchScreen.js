@@ -1,12 +1,15 @@
-import React from 'react'
-import SearchBar from '../SearchBar'
+import React, {useState} from 'react'
+import MovieRow from '../MovieRow'
 import requests from '../../shared/requests'
 
 function MovieSearch() {
 
+  const [searchMovie, setSearchMovie]= useState('a')
+
   return (
     <>
-      <SearchBar request={requests.fetchSearch}/>
+      <input type="search" placeholder="Search For a Movie..." className="searchBar" onChange={event=> setSearchMovie(event.target.value)}/>
+      <MovieRow request={`${requests.fetchSearch}${searchMovie}`}/>
     </>
   )
 }
