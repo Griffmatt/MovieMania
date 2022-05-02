@@ -4,6 +4,7 @@ import MovieMedia from '../MovieMedia';
 import requests from '../../shared/requests'
 import Crew from '../Crew';
 import Cast from '../Cast';
+import Review from '../Reviews';
 
 import{ useDispatch, useSelector} from 'react-redux'
 import { addFavorite, removeFavorite, selectFavorite } from '../../redux/favoriteSlice'
@@ -32,7 +33,6 @@ function MovieInfo({id}) {
             setGenre(response.data.genres)
             setMovieYear(response.data.release_date.slice(0,4))
             setLoading(false)
-            console.log(movie)
         return response
       }
       fetchData();
@@ -100,8 +100,11 @@ function MovieInfo({id}) {
                   {genre && getGenre()}
                   <h4>OverView</h4>
                   <p>{movie.overview}</p>
-                  <h5>{movieYear}  {runTime()} <span className='infoRating'>{movie.vote_average}/10</span></h5>                
-                  <Crew crew={crew} budget={budget()} revenue={revenue()}/>
+                  <h5>{movieYear}  {runTime()} <span className='infoRating'>{movie.vote_average}/10</span></h5>   
+                  <div className="crewAndReviewContainer">             
+                    <Crew crew={crew} budget={budget()} revenue={revenue()}/>
+                    <Review/>
+                  </div>
                   <Cast cast={cast}/>
               </div>
           </div>
