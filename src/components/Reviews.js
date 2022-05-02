@@ -44,15 +44,15 @@ function Review() {
     <div className="reviewContainer">
         <h4>Recent Reviews</h4>
         <div className="reviews">
-            {reviews.map(review =>{
+            {reviews.map((review, index) =>{
                 return(
-                    <div>
-                <h5>{review.name}</h5>
-                <div className="review">
-                    <div><h5>{review.rating}/10</h5><h5>{review.date}</h5></div>
-                    <p>{review.review}</p>
-                </div>
-            </div>
+                    <div key={index}>
+                        <h5>{review.name}</h5>
+                        <div className="review">
+                            <div><h5>{review.rating}/10</h5><h5>{review.date}</h5></div>
+                            <p>{review.review}</p>
+                        </div>
+                    </div>
                 )
             })}
         </div>

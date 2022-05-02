@@ -9,9 +9,9 @@ function MovieMedia({images, movie}) {
         <h4>Images</h4>
         <hr/>
         <Carousel showThumbs={false}>
-          {images.map(image =>{
+          {images.map((image, index) =>{
             return(
-              <img key={movie.title} src={`https://image.tmdb.org/t/p/w500${image.file_path}`} alt={movie.title} className="movieImages"/>
+              <img key={index} src={`https://image.tmdb.org/t/p/w500${image.file_path}`} alt={movie.title} className="movieImages"/>
             )
           })}
         </Carousel>

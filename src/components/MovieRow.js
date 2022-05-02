@@ -37,6 +37,7 @@ function MovieRow({request}) {
 
   const handleFavoritesClick = (movie) => {
     let filtered = favorites.filter(x => movie.title===x.title)
+    console.log(movies)
     if(filtered.length >= 1){
       dispatch(removeFavorite(movie))
     }else{
