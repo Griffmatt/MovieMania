@@ -1,0 +1,11 @@
+@import './variables/Variables.scss';
+
+label{
+    font-size: 18px;
+}
+
+input{
+    background-color: $secondaryGreyColor;
+    border: none;
+    border-radius: 10px;
+}

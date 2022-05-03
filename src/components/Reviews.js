@@ -1,6 +1,7 @@
 import React from 'react'
+import profileImage from "./../Images/profileImage.png"
 
-function Review({setShowModal}) {
+function Reviews() {
 
     const reviews = [
         {
@@ -42,12 +43,12 @@ function Review({setShowModal}) {
     ]
   return (
     <div className="reviewContainer">
-        <h4>Recent Reviews<button onClick={() => setShowModal(true)}> Write Your Review</button></h4>
+        <h4>Recent Reviews</h4>
         <div className="reviews">
             {reviews.map((review, index) =>{
                 return(
                     <div key={index}>
-                        <h5>{review.name}</h5>
+                        <h5><img src={profileImage} alt={"Profile"}/> {review.name}</h5>
                         <div className="review">
                             <div><h5>{review.rating}/10</h5><h5>{review.date}</h5></div>
                             <p>{review.review}</p>
@@ -60,4 +61,4 @@ function Review({setShowModal}) {
   )
 }
 
-export default Review;
+export default Reviews;

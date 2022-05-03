@@ -4,7 +4,8 @@ import MovieMedia from '../MovieMedia';
 import requests from '../../shared/requests'
 import Crew from '../Crew';
 import Cast from '../Cast';
-import Review from '../Reviews';
+import Reviews from '../Reviews';
+import YourReview from '../YourReview';
 
 import{ useDispatch, useSelector} from 'react-redux'
 import { addFavorite, removeFavorite, selectFavorite } from '../../redux/favoriteSlice'
@@ -20,9 +21,20 @@ function MovieInfo({id}) {
   const [genre, setGenre] = useState([])
   const [movieYear, setMovieYear] = useState([])
   const [loading, setLoading] = useState(true)
+  const [similar, setSimilar] = useState([])
 
   const favorites = useSelector(selectFavorite)
   const dispatch = useDispatch()
+
+  useEffect(()=>{
+    async function fetchSimilar(){
+      const response = await instance.get(`/movie/${id}${requests.fetchSimilar}`)
+            setSimilar(response.data.results)
+           
+        return response
+    }
+    fetchSimilar()
+  }, [id])
 
   useEffect(()=> {
     async function fetchData() {
@@ -38,6 +50,8 @@ function MovieInfo({id}) {
       }
       fetchData();
   }, [id])
+
+ 
 
   const getGenre = ()=> {
     
@@ -90,7 +104,8 @@ function MovieInfo({id}) {
  
 
   return (
-      loading? "":<div className="movieCardContainer">
+      loading? "":
+      <div className="movieCardContainer">
             <div className="movieCardRow">
             <div className="movieCard">
             <div key={movie.title} className="movieCardPoster">
@@ -119,13 +134,28 @@ function MovieInfo({id}) {
                         </div>
                       </div>
                     </div>
-                    <Review/>
+                    <YourReview/>
                   </div>
                   <Cast cast={cast}/>
               </div>
           </div>
           <MovieMedia images={images} movie={movie}/>
+          <Reviews/>
+          <div className="similarMovies">
+            <h4>Similar Movies</h4>
+            <div className="similarMoviesRow">
+              {similar.map(similarMovie=>{
+                return(
+                    <img 
+                      key={similarMovie.id}
+                      src={`${base_url}${similarMovie.poster_path}`} 
+                      alt={similarMovie.title}
+                    /> 
+                )
+              })}
+            </div>
           </div>
+        </div>
     </div>
   )
  

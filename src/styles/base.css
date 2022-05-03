@@ -38,6 +38,12 @@ h1 {
   }
 }
 
+h4 {
+  color: #399dcc;
+  font-size: 25px;
+  font-weight: 700;
+}
+
 .star {
   font-size: 45px;
   position: absolute;

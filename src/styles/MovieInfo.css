@@ -56,9 +56,7 @@
 }
 
 .movieInfo h4 {
-  font-size: 25px;
   margin-bottom: 5px;
-  color: #399dcc;
 }
 
 .movieInfo p {
@@ -84,9 +82,7 @@
 }
 
 .movieMediaContainer h4 {
-  font-size: 25px;
   margin-bottom: 5px;
-  color: #399dcc;
 }
 
 .infoRating {
@@ -177,12 +173,12 @@
 
 .starringCastInfo h6 {
   margin: 0;
-  font-size: 15px;
+  font-size: 17px;
 }
 
 .starringCastInfo p {
   color: #ceae22;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .starringCastInfo img {
@@ -212,81 +208,27 @@
   background-color: #399dcc;
 }
 
-.crewAndReviewContainer {
+.similarMovies {
+  margin-bottom: 25px;
+}
+
+.similarMovies h4 {
+  text-align: left;
+  margin-left: 15px;
+}
+
+.similarMoviesRow {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin-top: 0;
+  overflow-x: scroll;
 }
 
-.reviewContainer {
-  max-width: 700px;
-  width: 45vw;
-}
-
-.reviewContainer h4 {
-  margin-top: 0;
-}
-
-.reviewContainer button {
-  color: white;
-  background-color: #7a7a7a;
-  font-size: 15px;
-  font-weight: 600;
-  margin-left: 10px;
-  padding: 15px;
-  border: none;
-  border-radius: 10px;
+.similarMoviesRow img {
+  width: 200px;
+  height: auto;
+  margin: 15px;
   -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
           box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
-  cursor: pointer;
-}
-
-.reviewContainer button:hover {
-  opacity: .85;
-}
-
-.reviewContainer h5 {
-  margin-bottom: 5px;
-}
-
-@media only screen and (max-width: 1000px) {
-  .reviewContainer {
-    width: 100%;
-  }
-}
-
-.review {
-  padding: 10px;
-  border: 2px solid #7a7a7a;
-  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
-          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
-  border-radius: 5px;
-}
-
-.review div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.review h5 {
-  margin-bottom: 10px;
-  color: #ceae22;
-}
-
-.reviews {
-  max-height: 250px;
-  overflow-y: scroll;
-  padding: 10px;
-  border-radius: 10px;
 }
 /*# sourceMappingURL=MovieInfo.css.map */

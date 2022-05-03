@@ -44,9 +44,7 @@
         margin-bottom: 10px;
     }
     h4{
-        font-size: 25px;
         margin-bottom: 5px;
-        color: $mainBlueColor
     }
     p{
         font-size: 18px;
@@ -65,9 +63,9 @@
     justify-content: space-around;
     flex-wrap: wrap;
     h4{
-        font-size: 25px;
+       
         margin-bottom: 5px;
-        color: $mainBlueColor
+      
     }
     
 }
@@ -148,11 +146,11 @@
     overflow-x: scroll;
     h6{
         margin:0;
-        font-size: 15px;
+        font-size: 17px;
     }
     p{
         color: $mainGoldColor;
-        font-size: 12px;
+        font-size: 14px;
     }
     img{
       width: 150px;
@@ -181,65 +179,23 @@
     background-color: rgba($mainBlueColor, 1);
   }
 
-  .crewAndReviewContainer{
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      margin-top: 0;
-  }
 
-
-  .reviewContainer{
-      max-width:700px;
-      width: 45vw;
+  .similarMovies{
+      margin-bottom: 25px;
       h4{
-          margin-top:0
+
+          text-align: left;
+          margin-left: 15px;
          
       }
-      button{
-        color:$whiteColor;
-        background-color: $secondaryGreyColor;
-        font-size: 15px;
-        font-weight: 600;
-        margin-left: 10px;
-        padding: 15px;
-        border: none;
-        border-radius: 10px;
+  }
+  .similarMoviesRow{
+      display: flex;
+      overflow-x: scroll;
+      img{
+        width: 200px;
+        height:auto; 
+        margin:15px;
         box-shadow: 5px 5px 5px rgba($blackColor, .5);
-        cursor: pointer;
-    }
-    button:hover{
-        opacity: .85;
-    }
-      h5{
-          margin-bottom: 5px;
       }
-  }
-
-  @media only screen and (max-width: 1000px) {
-    .reviewContainer{
-      width: 100%;
-    }
-  }
-
-  .review{
-    padding: 10px;
-    border: 2px solid $secondaryGreyColor;
-    box-shadow: 5px 5px 5px rgba($blackColor, .5);
-    border-radius: 5px;
-    div{
-        display: flex;
-        justify-content: space-between;
-    }
-    h5{
-        margin-bottom:10px;
-        color: $mainGoldColor
-    }
-  }
-
-  .reviews{
-      max-height: 250px;
-      overflow-y: scroll;
-      padding: 10px;
-      border-radius: 10px;
   }
