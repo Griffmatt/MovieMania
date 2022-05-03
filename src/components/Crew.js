@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Crew({crew, budget, revenue}) {
+function Crew({crew}) {
     const getCrewInfo = (position) => {
         const results = crew.filter(
           (person) => person.job === position
@@ -40,16 +40,7 @@ function Crew({crew, budget, revenue}) {
         {crew && getCrewInfo('Screenplay')}
         </div>
     </div>
-    <div className="budgetInfo">
-        <div>
-          <h4>Budget</h4>
-          <p>{budget}</p>
-        </div>
-        <div>
-          <h4>Revenue</h4>
-          <p>{revenue}</p>
-        </div>
-    </div>
+   
   </div>
   )
 }

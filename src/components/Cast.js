@@ -20,7 +20,7 @@ function Cast({cast}) {
                 {starringCast.map(actor =>{
                     return(
                         <div key={actor.id}>
-                            <img src={`${base_url}${actor.profile_path}`}/>
+                            <img src={`${base_url}${actor.profile_path}`} alt={actor.name}/>
                             {splitActorName(actor)}
                             <p>{actor.character}</p>
                         </div>

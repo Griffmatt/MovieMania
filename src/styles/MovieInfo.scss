@@ -28,6 +28,7 @@
         height: auto;
         width: 100%;
         min-width: 300px;
+        box-shadow: 5px 5px 5px rgba($blackColor, .5);
     }
 }
 
@@ -78,6 +79,7 @@
 
 .crew{
     display: flex;
+    flex-wrap: wrap;
 }
 
 .genre{
@@ -99,6 +101,7 @@
 
 .movieImageContainer{
     max-width: 600px;
+    width:90vw;
 }
 
 .movieImages{
@@ -127,7 +130,7 @@
 }
 
 .crewInfo{
-    min-width: 300px;
+    width: 300px;
 }
 
 
@@ -191,7 +194,23 @@
       width: 45vw;
       h4{
           margin-top:0
+         
       }
+      button{
+        color:$whiteColor;
+        background-color: $secondaryGreyColor;
+        font-size: 15px;
+        font-weight: 600;
+        margin-left: 10px;
+        padding: 15px;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 5px 5px 5px rgba($blackColor, .5);
+        cursor: pointer;
+    }
+    button:hover{
+        opacity: .85;
+    }
       h5{
           margin-bottom: 5px;
       }
@@ -206,6 +225,8 @@
   .review{
     padding: 10px;
     border: 2px solid $secondaryGreyColor;
+    box-shadow: 5px 5px 5px rgba($blackColor, .5);
+    border-radius: 5px;
     div{
         display: flex;
         justify-content: space-between;
@@ -219,4 +240,6 @@
   .reviews{
       max-height: 250px;
       overflow-y: scroll;
+      padding: 10px;
+      border-radius: 10px;
   }

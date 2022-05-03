@@ -9,6 +9,7 @@ import Review from '../Reviews';
 import{ useDispatch, useSelector} from 'react-redux'
 import { addFavorite, removeFavorite, selectFavorite } from '../../redux/favoriteSlice'
 
+
 function MovieInfo({id}) {
   const base_url = "https://image.tmdb.org/t/p/w500"
 
@@ -71,13 +72,16 @@ function MovieInfo({id}) {
 
   const runTime =() => { return parseInt(movie.runtime/60) === 0?`${movie.runtime-parseInt(movie.runtime/60)*60}m`: `${parseInt(movie.runtime/60)}h ${movie.runtime-parseInt(movie.runtime/60)*60}m`}
 
-  const budget =()=> { return (movie.budget).toLocaleString('en-US', {
+  const budget =()=> { 
+    if(movie.budget === 0) return "N/A"
+    return (movie.budget).toLocaleString('en-US', {
     style: 'currency',
     currency: 'USD',
     maximumFractionDigits: 0,
   })}
 
   const revenue =()=>{
+    if(movie.revenue=== 0) return "N/A"
     return (movie.revenue).toLocaleString('en-US', {
       style: 'currency',
       currency: 'USD',
@@ -101,8 +105,20 @@ function MovieInfo({id}) {
                   <h4>OverView</h4>
                   <p>{movie.overview}</p>
                   <h5>{movieYear}  {runTime()} <span className='infoRating'>{movie.vote_average}/10</span></h5>   
-                  <div className="crewAndReviewContainer">             
-                    <Crew crew={crew} budget={budget()} revenue={revenue()}/>
+                  <div className="crewAndReviewContainer">
+                    <div className="crewAndBudgetInfo">             
+                      <Crew crew={crew} />
+                      <div className="budgetInfo">
+                        <div>
+                          <h4>Budget</h4>
+                          <p>{budget()}</p>
+                        </div>
+                        <div>
+                          <h4>Revenue</h4>
+                          <p>{revenue()}</p>
+                        </div>
+                      </div>
+                    </div>
                     <Review/>
                   </div>
                   <Cast cast={cast}/>

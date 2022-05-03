@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Review() {
+function Review({setShowModal}) {
 
     const reviews = [
         {
@@ -42,7 +42,7 @@ function Review() {
     ]
   return (
     <div className="reviewContainer">
-        <h4>Recent Reviews</h4>
+        <h4>Recent Reviews<button onClick={() => setShowModal(true)}> Write Your Review</button></h4>
         <div className="reviews">
             {reviews.map((review, index) =>{
                 return(

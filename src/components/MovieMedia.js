@@ -8,7 +8,7 @@ function MovieMedia({images, movie}) {
       <div className="movieImageContainer">
         <h4>Images</h4>
         <hr/>
-        <Carousel showThumbs={false}>
+        <Carousel showThumbs={false} >
           {images.map((image, index) =>{
             return(
               <img key={index} src={`https://image.tmdb.org/t/p/w500${image.file_path}`} alt={movie.title} className="movieImages"/>
