@@ -134,7 +134,7 @@ function MovieInfo({id}) {
                         </div>
                       </div>
                     </div>
-                    <YourReview/>
+                    <YourReview movie={movie}/>
                   </div>
                   <Cast cast={cast}/>
               </div>

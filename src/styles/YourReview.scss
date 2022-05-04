@@ -1,11 +1,63 @@
 @import './variables/Variables.scss';
 
-label{
-    font-size: 18px;
+
+.yourReview{
+    display: flex;
+    flex-direction: column;
+    max-width:700px;
+    width: 93vw;
+    h4{
+        margin:0;
+    }
+    form{
+        display: flex;
+        flex-direction: column; 
+    }
+    label{
+        font-size: 18px;
+    }
+
+    textArea{
+        background-color: $bodyColor;
+        width: 100%;
+        border: none;
+        border-radius: 10px;
+        color: $whiteColor;
+        font-size: 18px;
+        resize: none;
+    }
+    button{
+        width: 25%;
+        min-width: 150px;
+        height:30px;
+        margin-top: 10px;
+        border-radius: 10px;
+        align-self: flex-end;
+        font-size: 18px;
+        font-weight: 500;
+        background-color: $mainBlueColor;
+        color: $whiteColor;
+        border: none;
+        cursor: pointer;
+    }
+
+    button:hover{
+        opacity: .9;
+    }
+
 }
 
-input{
-    background-color: $secondaryGreyColor;
-    border: none;
-    border-radius: 10px;
-}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: $whiteColor;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: $whiteColor;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: $whiteColor;
+  }
+

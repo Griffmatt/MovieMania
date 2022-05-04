@@ -1,10 +1,98 @@
-label {
+.yourReview {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 700px;
+  width: 93vw;
+}
+
+.yourReview h4 {
+  margin: 0;
+}
+
+.yourReview form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.yourReview label {
   font-size: 18px;
 }
 
-input {
-  background-color: #7a7a7a;
+.yourReview textArea {
+  background-color: #282c34;
+  width: 100%;
   border: none;
   border-radius: 10px;
+  color: white;
+  font-size: 18px;
+  resize: none;
+}
+
+.yourReview button {
+  width: 25%;
+  min-width: 150px;
+  height: 30px;
+  margin-top: 10px;
+  border-radius: 10px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  font-size: 18px;
+  font-weight: 500;
+  background-color: #399dcc;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.yourReview button:hover {
+  opacity: .9;
+}
+
+::-webkit-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity: 1;
+  /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity: 1;
+  /* Firefox */
+}
+
+::-ms-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity: 1;
+  /* Firefox */
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity: 1;
+  /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: white;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: white;
 }
 /*# sourceMappingURL=YourReview.css.map */
