@@ -21,6 +21,8 @@
     border-radius: 5px;
     background-color: $mainGreyColor;
     position: relative;
+    box-shadow: 5px 5px 5px rgba($blackColor, .5);
+    transition: transform 200ms;
     img{
         height: 450px;
         width: 300px;
@@ -35,6 +37,10 @@
     font-weight: 600;
     
   }
+}
+
+.moviePoster:hover{
+  transform: scale(1.05);
 }
 
 

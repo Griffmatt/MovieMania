@@ -18,7 +18,7 @@ function YourReview({movie}) {
       if(filteredReviews.length > 0){
           dispatch(removeReview(movie.title))
       }
-      dispatch(addReview({title: movie.title, rating: rating, review: review}))
+      dispatch(addReview({title: movie.title, rating: rating, review: review, id: movie.id}))
   }
 
   const handleRating = (rate) => {
@@ -30,7 +30,7 @@ function YourReview({movie}) {
     <div className="yourReview">
         <h4>Write A Review</h4>
         <form>
-            <Rating allowHalfIcon={true} allowHover={false} fillColor={"rgb(206, 174, 34)"} emptyColor={"rgb(122, 122, 122)"} iconsCount={10} onClick={handleRating} size={30}/>
+            <Rating allowHalfIcon={true} allowHover={false} fillColor={"rgb(206, 174, 34)"} emptyColor={"rgb(122, 122, 122)"} iconsCount={10} onClick={handleRating} size={30} transition={true}/>
             <textarea rows={4} placeholder="What did you think of this movie?" onChange={(event)=>setReview(event.target.value)}/>
             <button onClick={()=> handleAddReview(movie)} type="button">Submit Review</button>
         </form>

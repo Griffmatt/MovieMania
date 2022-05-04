@@ -21,6 +21,7 @@ function MovieInfo({id}) {
   const [genre, setGenre] = useState([])
   const [movieYear, setMovieYear] = useState([])
   const [loading, setLoading] = useState(true)
+  const [videos, setVideos] = useState([])
   const [similar, setSimilar] = useState([])
 
   const favorites = useSelector(selectFavorite)
@@ -45,13 +46,14 @@ function MovieInfo({id}) {
             setImages(response.data.images.backdrops)
             setGenre(response.data.genres)
             setMovieYear(response.data.release_date.slice(0,4))
+            setVideos(response.data.videos.results)
             setLoading(false)
         return response
       }
       fetchData();
   }, [id])
 
- 
+ console.log(videos)
 
   const getGenre = ()=> {
     
@@ -139,7 +141,7 @@ function MovieInfo({id}) {
                   <Cast cast={cast}/>
               </div>
           </div>
-          <MovieMedia images={images} movie={movie}/>
+          <MovieMedia images={images} movie={movie} videos={videos}/>
           <Reviews/>
           <div className="similarMovies">
             <h4>Similar Movies</h4>
