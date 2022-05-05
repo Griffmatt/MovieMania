@@ -7,6 +7,8 @@ import Cast from '../Cast';
 import Reviews from '../Reviews';
 import YourReview from '../YourReview';
 
+import {Link} from 'react-router-dom'
+
 import{ useDispatch, useSelector} from 'react-redux'
 import { addFavorite, removeFavorite, selectFavorite } from '../../redux/favoriteSlice'
 
@@ -38,6 +40,7 @@ function MovieInfo({id}) {
   }, [id])
 
   useEffect(()=> {
+    window.scrollTo(0, 0);
     async function fetchData() {
           const response = await instance.get(`/movie/${id}${requests.fetchMovieInfo}`)
             setMovie(response.data)
@@ -51,6 +54,7 @@ function MovieInfo({id}) {
         return response
       }
       fetchData();
+  
   }, [id])
 
  console.log(videos)
@@ -148,11 +152,13 @@ function MovieInfo({id}) {
             <div className="similarMoviesRow">
               {similar.map(similarMovie=>{
                 return(
+                  <Link to={`/${similarMovie.id}`}>
                     <img 
                       key={similarMovie.id}
                       src={`${base_url}${similarMovie.poster_path}`} 
                       alt={similarMovie.title}
                     /> 
+                  </Link>
                 )
               })}
             </div>

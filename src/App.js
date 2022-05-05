@@ -5,6 +5,8 @@ import './styles/MovieInfo.css'
 import './styles/MovieBanner.css'
 import './styles/Reviews.css'
 import './styles/YourReview.css'
+import './styles/MovieMedia.css'
+
 import HomeScreen from './components/screens/HomeScreen';
 import MovieInfo from './components/screens/MovieInfo';
 

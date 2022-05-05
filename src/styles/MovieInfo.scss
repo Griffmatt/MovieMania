@@ -58,17 +58,6 @@
     }
 }
 
-.movieMediaContainer{
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    h4{
-       
-        margin-bottom: 5px;
-      
-    }
-    
-}
 .infoRating{
     margin-left: 10px;
     color: $mainGoldColor;
@@ -96,17 +85,6 @@
  .crewMember{
      margin-right: 10px;
  }
-
-.movieImageContainer{
-    max-width: 600px;
-    width:90vw;
-}
-
-.movieImages{
-    height: auto;
-    width: 90vw;
-    max-width: 600px;
-}
 
 .crewAndBudgetInfo{
     display: flex;
@@ -164,20 +142,6 @@
     
 }
 
-::-webkit-scrollbar {
-    background-color: $mainGreyColor;
-    height: 8px;
-    margin:2px;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background-color: rgba($mainBlueColor, 0.8);
-    border-radius: 5px;
-  }
-
-  ::-webkit-scrollbar-thumb:hover {
-    background-color: rgba($mainBlueColor, 1);
-  }
 
 
   .similarMovies{
@@ -197,5 +161,6 @@
         height:auto; 
         margin:15px;
         box-shadow: 5px 5px 5px rgba($blackColor, .5);
+        cursor: pointer;
       }
   }

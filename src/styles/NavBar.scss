@@ -77,3 +77,10 @@
     outline: none;
     opacity: .9;
 }
+
+.searchIcon:after{
+   color: white;
+   height: 25px;
+   width: auto; 
+   content: "\5A9";
+}
