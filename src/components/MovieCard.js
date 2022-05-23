@@ -2,7 +2,7 @@ import React from 'react'
 import Crew from './Crew';
 import MovieMedia from './MovieMedia';
 
-function MovieCard({movie, images, cast, crew, genre, movieYear}) {
+function MovieCard({movie, images, crew, genre, movieYear}) {
   const base_url = "https://image.tmdb.org/t/p/w500"
 
   let runTime = `${parseInt(movie.runtime/60)}h ${movie.runtime-parseInt(movie.runtime/60)*60}m`

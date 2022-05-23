@@ -4,12 +4,13 @@ import{ useDispatch, useSelector } from 'react-redux'
 import { addReview, removeReview, selectReview} from './../redux/reviewSlice'
 
 
+
 function YourReview({movie}) {
 
     const [rating, setRating] = useState(0)
     const [review, setReview] = useState("")
 
-    const [user, setUser] = useState()
+    const [user, setUser] = useState(true)
 
  
   const dispatch = useDispatch()
@@ -21,11 +22,11 @@ function YourReview({movie}) {
           dispatch(removeReview(movie.title))
       }
       dispatch(addReview({title: movie.title, rating: rating, review: review, id: movie.id}))
+
   }
 
   const handleRating = (rate) => {
     setRating(rate/10)
-    console.log(reviews)
   }
 
   return (
@@ -33,7 +34,7 @@ function YourReview({movie}) {
         <h4>Write A Review</h4>
         <form>
             <Rating allowHalfIcon={true} allowHover={false} fillColor={"rgb(206, 174, 34)"} emptyColor={"rgb(122, 122, 122)"} iconsCount={10} onClick={handleRating} size={30} transition={true}/>
-            <textarea rows={4} placeholder="What did you think of this movie?" onChange={(event)=>setReview(event.target.value)}/>
+            <textarea rows={4} placeholder="What did you think of this movie?(optional)" onChange={(event)=>setReview(event.target.value)}/>
             {user?<button onClick={()=> handleAddReview(movie)} type="button">Submit Review</button>:<button type="button">Login to Submit</button>}
         </form>
     </div>

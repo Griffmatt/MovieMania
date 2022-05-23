@@ -44,16 +44,19 @@
   max-width: 1800px;
 }
 
+.navBar .navItems nav {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
 .navLinks {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   list-style-type: none;
   gap: 15px;
 }
@@ -75,9 +78,6 @@
 }
 
 @media only screen and (max-width: 425px) {
-  .navLinks a {
-    display: none;
-  }
   .navBar h1 {
     font-size: 1.8rem;
   }

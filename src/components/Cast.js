@@ -6,22 +6,14 @@ function Cast({cast}) {
     
     const getStarringCast = (cast) =>{
         const starringCast = cast.filter(actor => actor.profile_path)
-        const splitActorName = (actor) => {
-            let name = actor.name.split(" ")
-            return (
-            <>
-                <h6>{name[0]}</h6> 
-                <h6>{name[1]}</h6>
-            </>
-                
-                )}
+
         return(
             <div className="starringCastInfo">
                 {starringCast.map(actor =>{
                     return(
                         <div key={actor.id}>
                             <img src={`${base_url}${actor.profile_path}`} alt={actor.name}/>
-                            {splitActorName(actor)}
+                            <h6>{actor.name}</h6> 
                             <p>{actor.character}</p>
                         </div>
                     )

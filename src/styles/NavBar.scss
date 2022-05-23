@@ -26,13 +26,15 @@
         justify-content: space-between;
         width: 100%;
         max-width: 1800px;
+        nav{
+            align-self: center;
+        }
     }
 }
 
 .navLinks{
-    display: inline-flex;
+    display: flex;
     justify-content: space-between;
-    align-items: center;
     list-style-type: none;
     gap: 15px;
     a{
@@ -52,15 +54,12 @@
 
 @media only screen and (max-width: 425px) {
 
-    .navLinks a { 
-       display: none;
-    }
-
     .navBar h1{
         font-size: 1.8rem;
     }
  
  }
+
 
 .searchBar{
     height: 40px;

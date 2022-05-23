@@ -51,13 +51,13 @@ function MovieInfo({id}) {
             setMovieYear(response.data.release_date.slice(0,4))
             setVideos(response.data.videos.results)
             setLoading(false)
+          
         return response
       }
       fetchData();
   
   }, [id])
 
- console.log(videos)
 
   const getGenre = ()=> {
     
@@ -146,7 +146,7 @@ function MovieInfo({id}) {
               </div>
           </div>
           <MovieMedia images={images} movie={movie} videos={videos}/>
-          <Reviews/>
+          <Reviews />
           <div className="similarMovies">
             <h4>Similar Movies</h4>
             <div className="similarMoviesRow">

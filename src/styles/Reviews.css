@@ -45,6 +45,7 @@
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  overflow-y: hidden;
 }
 
 .reviews h5 {
