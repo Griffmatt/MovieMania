@@ -9,6 +9,8 @@ function YourReview({movie}) {
     const [rating, setRating] = useState(0)
     const [review, setReview] = useState("")
 
+    const [user, setUser] = useState()
+
  
   const dispatch = useDispatch()
   const reviews = useSelector(selectReview)
@@ -32,10 +34,10 @@ function YourReview({movie}) {
         <form>
             <Rating allowHalfIcon={true} allowHover={false} fillColor={"rgb(206, 174, 34)"} emptyColor={"rgb(122, 122, 122)"} iconsCount={10} onClick={handleRating} size={30} transition={true}/>
             <textarea rows={4} placeholder="What did you think of this movie?" onChange={(event)=>setReview(event.target.value)}/>
-            <button onClick={()=> handleAddReview(movie)} type="button">Submit Review</button>
+            {user?<button onClick={()=> handleAddReview(movie)} type="button">Submit Review</button>:<button type="button">Login to Submit</button>}
         </form>
     </div>
   )
 }
 
-export default YourReview
+export default YourReview;

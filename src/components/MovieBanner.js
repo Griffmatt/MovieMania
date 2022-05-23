@@ -20,7 +20,7 @@ function MovieBanner() {
     <>
         {movie?<div className="movieBanner">
             <div>
-                <Link to="/movie">
+                <Link to={`/${movie.id}`}>
                     <h1>{movie.title}</h1>
                 </Link>
                 <img src={`${base_url}${movie.backdrop_path}`} alt={movie.title}/>
