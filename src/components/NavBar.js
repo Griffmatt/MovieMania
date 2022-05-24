@@ -4,13 +4,12 @@ import profileImage from "./../Images/profileImage.png"
 
 function NavBar() {
   const [user, setUser] = useState()
-
+  const [ active, setActive] = useState(false)
   return (
     <div className="navBar">
-      <div className="navItems">
+      <nav className="navItems">
         <a href="/"><h1><span className="titleMovie">M</span>ovie<span className="titleMania">M</span>ania</h1></a>
-        <nav>
-        <ul className="navLinks">
+        <ul className={`navLinks ${active?"active":""}`}>
           <li><a href="/">Home</a></li>
           <li><a href="/search-movies">
               <svg
@@ -26,8 +25,12 @@ function NavBar() {
           <li><a href="/favorite-movies">Profile</a></li>
           <li>{user?<a href="/profile"><img src={profileImage} alt="Profile" width={35} height={35}/></a>:<a href="/login">Login</a>}</li>
         </ul>
-        </nav>
-      </div>
+        <div className={`hamburger ${active?"active":""}`} onClick={()=>setActive(!active)}>
+          <span className="bar"/>
+          <span className="bar"/>
+          <span className="bar"/>
+        </div>
+      </nav>
     </div>
   )
 }
