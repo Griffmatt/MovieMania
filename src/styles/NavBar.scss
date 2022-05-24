@@ -39,11 +39,15 @@
     list-style: none;
     gap: 15px;
     margin-right: 10px;
+    font-weight: 600;
+    font-size: 1.8rem;
     a{
+        margin-right: 10px;
         font-weight: 600;
-        color: $whiteColor;
         font-size: 1.8rem;
+        color: $whiteColor;
         text-decoration: none;
+        cursor: pointer;
     }
     a:hover{
         opacity: .9;

@@ -10,6 +10,7 @@ body {
     background-color: $bodyColor;
     color: $whiteColor;
     text-align: center;
+    overflow-x: hidden;
 }
 
 .greatMovie{
@@ -36,7 +37,7 @@ body {
   @media only screen and (max-width: 425px) {
 
     h1 { 
-       display: none;
+       font-size: 1.1rem;
     }
  
  }

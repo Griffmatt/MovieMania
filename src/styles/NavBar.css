@@ -61,13 +61,17 @@
   list-style: none;
   gap: 15px;
   margin-right: 10px;
+  font-weight: 600;
+  font-size: 1.8rem;
 }
 
 .navLinks a {
+  margin-right: 10px;
   font-weight: 600;
-  color: white;
   font-size: 1.8rem;
+  color: white;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .navLinks a:hover {

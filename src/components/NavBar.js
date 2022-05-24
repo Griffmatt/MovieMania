@@ -14,7 +14,7 @@ function NavBar() {
           <li><NavLink to="/" onClick={()=>setActive(!active)}>Home</NavLink></li>
           <li><NavLink to="/search-movies" onClick={()=>setActive(!active)}>Search</NavLink></li>
           <li><NavLink to="/favorite-movies" onClick={()=>setActive(!active)}>Profile</NavLink></li>
-          <li>{user?<NavLink to="/profile" onClick={()=>setActive(!active)}><img src={profileImage} alt="Profile" width={35} height={35}/></NavLink>:<NavLink to="/login" onClick={()=>setActive(!active)}>Login</NavLink>}</li>
+          <li><a>Login</a></li>
         </ul>
         <div className={`hamburger ${active?"active":""}`} onClick={()=>setActive(!active)}>
           <span className="bar"/>
