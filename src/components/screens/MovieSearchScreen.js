@@ -9,7 +9,7 @@ function MovieSearch() {
   return (
     <>
       <input type="search" placeholder="Search For a Movie..." className="searchBar" onChange={event=> setSearchMovie(event.target.value)}/>
-      <MovieRow request={`${requests.fetchSearch}${searchMovie}`}/>
+      <MovieRow request={`${requests.fetchSearch}${searchMovie}`} search={true}/>
     </>
   )
 }

@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 import{ useDispatch, useSelector} from 'react-redux'
 import { addFavorite, removeFavorite, selectFavorite } from '../redux/favoriteSlice'
 
-function MovieRow({request}) {
+function MovieRow({request, search}) {
 
   const dispatch = useDispatch()
   
@@ -21,12 +21,13 @@ function MovieRow({request}) {
       
       return favorites
     }
-   
+   if(search){
+     setMovies([])
+   }
     async function fetchData() {
-      setMovies([])
-        const response = await instance.get(request)
-        setMovies(response.data.results)
-        return response;
+      const response = await instance.get(request)
+      setMovies(response.data.results)
+      return response;
     }
     fetchData();
   },[request, favorites] );
@@ -38,7 +39,6 @@ function MovieRow({request}) {
 
   const handleFavoritesClick = (movie) => {
     let filtered = favorites.filter(x => movie.title===x.title)
-    console.log(movies)
     if(filtered.length >= 1){
       dispatch(removeFavorite(movie))
     }else{

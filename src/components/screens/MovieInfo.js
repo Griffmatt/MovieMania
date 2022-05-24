@@ -30,6 +30,7 @@ function MovieInfo({id}) {
   const dispatch = useDispatch()
 
   useEffect(()=>{
+    
     async function fetchSimilar(){
       const response = await instance.get(`/movie/${id}${requests.fetchSimilar}`)
             setSimilar(response.data.results)
