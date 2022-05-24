@@ -23,6 +23,7 @@ function MovieRow({request}) {
     }
    
     async function fetchData() {
+      setMovies([])
         const response = await instance.get(request)
         setMovies(response.data.results)
         return response;

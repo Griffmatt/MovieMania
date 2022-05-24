@@ -1,5 +1,5 @@
 .navBar {
-  width: 100;
+  width: 100vw;
   height: 75px;
   background-color: black;
   display: -webkit-box;
@@ -60,6 +60,7 @@
           align-items: center;
   list-style: none;
   gap: 15px;
+  margin-right: 10px;
 }
 
 .navLinks a {
@@ -71,6 +72,10 @@
 
 .navLinks a:hover {
   opacity: .9;
+}
+
+.navLinks a.active {
+  color: #ceae22;
 }
 
 .navLinks :focus {
@@ -110,6 +115,8 @@
     text-align: center;
     -webkit-transition: .3s;
     transition: .3s;
+    margin-right: 0;
+    padding-bottom: 10px;
   }
   .navLinks.active {
     right: 0;
@@ -133,7 +140,7 @@
 
 .searchBar {
   height: 40px;
-  width: 100%;
+  width: 95%;
   max-width: 800px;
   border-radius: 10px;
   border: none;
@@ -141,6 +148,8 @@
   font-size: 18px;
   font-weight: 600;
   text-indent: 10px;
+  color: white;
+  background-color: #454545;
 }
 
 .searchBar:focus {
