@@ -7,7 +7,7 @@ A dynamic web app for users to browse, search, favorite, and rate movies.
 * [Overview](#overview)
 * [Technologies](#technologies)
 * [Features](#features)
-* [Working On](#Currently Working on)
+* [Working On](#CurrentlyWorkingon)
 * [Setup](#setup)
 * [Author](#author)
 
