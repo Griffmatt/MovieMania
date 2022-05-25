@@ -7,7 +7,7 @@ A dynamic web app for users to browse, search, favorite, and rate movies.
 * [Overview](#overview)
 * [Technologies](#technologies)
 * [Features](#features)
-* [Working On](#CurrentlyWorkingon)
+* [Working On](#Next)
 * [Setup](#setup)
 * [Author](#author)
 
@@ -28,7 +28,7 @@ Project is created with:
 - Add to Favourites
 - Movie Search
 
-## Currently Working on
+## Next
 - Connecting to firesbase to allow users to login and save their favorite movies, and reviews
 
 ## Setup
