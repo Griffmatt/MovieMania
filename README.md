@@ -26,7 +26,10 @@ Project is created with:
 - Multiple Pages
 - Add to Favourites
 - Movie Search
-	
+
+## Currently Working on
+- connecting to firesbase to allow users to login and save their favorite movies, and reviews
+
 ## Setup
 To run this project, download Zip file, extract it and open the Terminal to locate the folder...
 
