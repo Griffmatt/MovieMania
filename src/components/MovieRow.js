@@ -21,12 +21,11 @@ function MovieRow({request, search}) {
       
       return favorites
     }
-   if(search){
-     setMovies([])
-   }
+   
     async function fetchData() {
       const response = await instance.get(request)
-      setMovies(response.data.results)
+      setMovies([])
+      setMovies(response.data.results.filter(movie=> movie.poster_path))
       return response;
     }
     fetchData();
@@ -51,9 +50,9 @@ function MovieRow({request, search}) {
   return (
     <div className="movieRowContainer">
       <div className="movieRowGrid">
-        {movies.map(movie =>{
+        {movies.map((movie, index) =>{
           return(
-            <div key={movie.title} className="moviePoster">
+            <div key={index} className="moviePoster">
               <input className="star" type="checkbox" onClick={() => handleFavoritesClick(movie)} defaultChecked={handleFavoritesCheck(movie)}/>
               <Link to={`/${movie.id}`}>
               <div className={`movieRating ${movie.vote_average > 9? "greatMovie":movie.vote_average > 7.5? "goodMovie":movie.vote_average > 5? "averageMovie": "badMovie"}`}>

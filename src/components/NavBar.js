@@ -1,10 +1,8 @@
 import React, {useState} from 'react'
-import profileImage from "./../Images/profileImage.png"
 import {NavLink} from 'react-router-dom'
 
 
 function NavBar() {
-  const [user, setUser] = useState()
   const [ active, setActive] = useState(false)
   return (
     <div className="navBar">
@@ -14,7 +12,6 @@ function NavBar() {
           <li><NavLink to="/" onClick={()=>setActive(!active)}>Home</NavLink></li>
           <li><NavLink to="/search-movies" onClick={()=>setActive(!active)}>Search</NavLink></li>
           <li><NavLink to="/favorite-movies" onClick={()=>setActive(!active)}>Profile</NavLink></li>
-          <li><a>Login</a></li>
         </ul>
         <div className={`hamburger ${active?"active":""}`} onClick={()=>setActive(!active)}>
           <span className="bar"/>
