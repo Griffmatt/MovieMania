@@ -29,7 +29,7 @@ function MovieRow({request, search}) {
       return response;
     }
     fetchData();
-  },[request, favorites] );
+  },[request] );
 
   const handleFavoritesCheck = (movie) =>{
     let filtered = favorites.filter(x => movie.title===x.title)
