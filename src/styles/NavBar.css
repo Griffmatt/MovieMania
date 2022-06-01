@@ -112,7 +112,6 @@
             flex-direction: column;
     background-color: black;
     width: 100%;
-    border-radius: 10px;
     text-align: center;
     -webkit-transition: .3s;
     transition: .3s;
