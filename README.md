@@ -40,4 +40,4 @@ $ npm start
 ```
 
 ## Author
-Griffin Matthews
+Griffin Matthews - [Linkedin](https://www.linkedin.com/in/griffin-matthews/) - griffinmmatthews@gmail.com - [Project Portfolio](https://luminous-valkyrie-8034e6.netlify.app/)
